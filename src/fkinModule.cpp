@@ -73,13 +73,13 @@ void KinModule::evaluateKinematics() {
 
   propertiesfile << "Properties: " << std::endl
             << armProperties.toString() << std::endl;
-
-  // for (int i = 0; i < 10; ++i) {
-  //   propertiesfile << armProperties.find("link_" + std::to_string(i)).asList()->toString() << std::endl;
-  // }
-
+  
   propertiesfile << "H0: " << std::endl
             << armProperties.find("H0").toString() << std::endl;
+
+  for (int i = 0; i < arm.getN(); ++i) {
+     propertiesfile << armProperties.findGroup("link_" + std::to_string(i)).toString() << std::endl;
+  }
 
   propertiesfile << "HN: " << std::endl
             << armProperties.find("HN").toString() << std::endl;

@@ -17,10 +17,10 @@ int main(int argc, char *argv[]) {
   rf.configure(argc, argv);
 
 
-  KinModule mod_v1("right_v1.0");
-  KinModule mod_v2("right_v2.0");
-  KinModule mod_v25("right_v2.5");
-  KinModule mod_v3("right_v3.0");
+  KinModule mod_v1("left_v1.0");
+  KinModule mod_v2("left_v2.0");
+  KinModule mod_v25("left_v2.5");
+  KinModule mod_v3("left_v3.0");
 
   if (!mod_v1.configure(rf)) {
     return EXIT_FAILURE;
